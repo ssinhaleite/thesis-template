@@ -1,0 +1,3 @@
+[submodule "biblio"]
+	path = biblio
+	url = git@code.ini.uzh.ch:ncs/papers/biblio.git

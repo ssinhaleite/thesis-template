@@ -16,10 +16,9 @@
 % ______________________________________________________________________________
 \documentclass[10pt,twoside,a4paper,fleqn]{report}
 
-%custom commands for comments of Giacomo (gi), Mohammad (ms), Miguel (mps)
-\newcommand{\gi}[1]{\textcolor{red}{{\bf GI:}~#1}}    
-\newcommand{\ms}[1]{\textcolor{cyan}{{\bf MS:}~#1}} 
-\newcommand{\mps}[1]{\colorbox{orange}{{\bf }~#1}} 
+%custom commands for comments of Supervisor (sv), phd candidate(pc)
+\newcommand{\sv}[1]{\textcolor{red}{{\bf SV:}~#1}}    
+\newcommand{\pc}[1]{\textcolor{cyan}{{\bf PC:}~#1}} 
 
 \usepackage[english,mt]{ethidsc} % Special IDSC styles and commands      	
 								 % {german}/english: language of headings, etc.
@@ -38,6 +37,9 @@
 \usepackage[edges]{forest}
 % forests (attempt II)
 \usepackage{forest}
+% acronym
+\usepackage{acronym}
+
 \usetikzlibrary{arrows.meta}
 \forestset{
   dir tree/.style={
@@ -67,29 +69,25 @@
 % accents and special characters
 %\usepackage[utf8]{inputenc}
 
-% Page header (don't change)____________________________________________________
+% Page header (don't change)________________________________________________
 \setlength{\parindent}{0em}                 % Disable parindent
 \rhead[\nouppercase{\rightmark}]{\thepage}  % Special headings
 \lhead[\thepage]{\nouppercase{\leftmark}}   % Special headings
 \cfoot{}                                    % Special headings
 
 
-% Title page (please fill in)___________________________________________________
-\title{Event-based analog signal recording and pre-processing frontends}
+% Title page (please fill in)____________________________________________
+\title{Thesis title here}
 
 
-\studentA{Mohammadali Sharifshazileh}
+\studentA{PhD Candidate Name}
 \ethidA{}
 \semesterA{}
 \emailA{}
 
-%\studentB{Second Student}
-%\ethidB{12-345-678}
-%\semesterB{9}
-%\emailB{second@student.ethz.ch}
 
-\supervision{Prof. Dr. Giacomo Indiveri \\ Prof. Dr. Johannes Sarnthein}
-\date{Nov 2022}
+\supervision{Prof. Dr. Supervisor}
+\date{Month YEAR}
 %\type{Ph.D. Thesis}
 %\identification{IDSC-XX-YY-ZZ} 		% Project identifier
 
@@ -98,7 +96,7 @@
 
 % Begin document________________________________________________________________
 \begin{document}
-
+\input{biblio/acronyms}
 \maketitle 							% Create title page
 
 
@@ -118,17 +116,7 @@
 
 \input{chapters/1_introduction}
 \newpage
-\input{chapters/2_daq}
-\newpage
-
-\input{chapters/3_cdesign}
-\newpage
-\input{chapters/4_csim}
-\newpage
-\input{chapters/5_expr}
-\newpage
-\input{chapters/6_discussion}
-\newpage
+	
 
 % Appendix______________________________________________________________________
 \appendix
@@ -140,6 +128,6 @@
 % Literature (Additional references can be added to the .bib-file manually, or by using, for example, the free application JabRef). Compile in the following order: latex -bibtex -latex -latex
 
 \bibliographystyle{plain}
-\bibliography{bibliography}
+\bibliography{biblio/biblioncs}
 
 \end{document}

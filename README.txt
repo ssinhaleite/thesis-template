@@ -1,6 +1,9 @@
 LaTeX Thesis Template v.1.5.x
 
-Institute of Neuroinformatics
+Institute of Neuroinformatics, UZH and ETH Zurich
+
+To use this template you need to have access to https://code.ini.uzh.ch/ncs/papers/biblio.
+
 Adapted from 
 > Copyright (C) 2004-2011
 > Institute for Dynamic Systems and Control, ETH Zurich

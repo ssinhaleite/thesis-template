@@ -164,13 +164,8 @@ Zurich, \the\day. \the\month. \the\year \\ %: \hrulefill
 \vspace{2.5cm} 
 
 {\large \bf Ph.D. Thesis}\\[3ex]
-\ifingerman
- Institut f\"{u}r Dynamische Systeme und Regelungstechnik\\
- Eidgen\"{o}ssische Technische Hochschule (ETH) Z\"{u}rich\\
-\else
  Institute of Neuroinformatics \\
- Swiss Federal Institute of Technology - University of Zurich\\
-\fi
+ University of Zurich and Swiss Federal Institute of Technology\\
 \vspace{3.5cm}
 
 \ifingerman
@@ -198,7 +193,7 @@ Zurich, \the\day. \the\month. \the\year \\ %: \hrulefill
 
 
 
-% Definition of info page (last page)___________________________________________
+% Definition of info page (last page)_______________________________________
 \newcommand{\infopage}{
 \AtEndDocument{
 
@@ -211,12 +206,8 @@ Zurich, \the\day. \the\month. \the\year \\ %: \hrulefill
 \hspace{-0.354cm}
 \includegraphics[height=2cm]{img/logo/eth_uzh_logo_kurz_pos_en.eps}\\
 {\sffamily
-\ifingerman
- Institut f\"{u}r Dynamische Systeme und Regelungstechnik\\
-\else
- Institute of Neuroinformatics\\
-\fi
-Prof.~Dr.~G.~Indiveri}
+Institute of Neuroinformatics\\
+\@supervision}
 \vspace{1.5cm}
 
 \ifingerman
@@ -257,8 +248,7 @@ Ph.D. Thesis, \@date\\[2.5ex]
 \fi
 \begin{tabbing}
 \hspace*{3cm}  \= \kill
-%Name: \> \@studentA \\
-Name: \> Mohammadali Sharifshazileh \\
+Name: \> \@studentA \\
 E-mail: \> \@emailA \\
 %Legi-Nr.: \> \@ethidA \\
 \end{tabbing}
