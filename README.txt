@@ -4,6 +4,9 @@ Institute of Neuroinformatics, UZH and ETH Zurich
 
 To use this template you need to have access to https://code.ini.uzh.ch/ncs/papers/biblio.
 
+You need to fill your information in the Titelblatt.doc and generate a pdf from it.
+This page is mandatory for MNF Thesis.
+
 Adapted from 
 > Copyright (C) 2004-2011
 > Institute for Dynamic Systems and Control, ETH Zurich
@@ -23,6 +26,7 @@ Version 1.5.1: 2022/06/30, Mohammad Ali & Vanessa Leite
 
 * Adaptations to include INI logo
 * Use of biblioncs as subproject
+* Add mandatory MNF page
 
 -----------------------------------------
 Version 1.4.1: 2014/13/03, Soren Ebbesen.

@@ -39,6 +39,8 @@
 \usepackage{forest}
 % acronym
 \usepackage{acronym}
+% to include a pdf with the title page
+\usepackage{pdfpages}
 
 \usetikzlibrary{arrows.meta}
 \forestset{
@@ -94,13 +96,24 @@
 \infopage
 %\declaration
 
-% Begin document________________________________________________________________
+
+% Begin document___________________________________________________________
 \begin{document}
 \input{biblio/acronyms}
 \maketitle 							% Create title page
 
 
-% Preamble______________________________________________________________________
+\newlength{\originalVOffset}
+ \newlength{\originalHOffset}
+ \setlength{\originalVOffset}{\voffset}   
+ \setlength{\originalHOffset}{\hoffset}
+ \setlength{\voffset}{0cm}
+ \setlength{\hoffset}{0cm}
+ \includepdf[pages=-]{Titelblatt.pdf}
+ \setlength{\voffset}{\originalVOffset}
+ \setlength{\hoffset}{\originalHOffset}
+ 
+% Preamble_______________________________________________________________
 
 \pagenumbering{roman} 				% Begin roman page numbering (i,ii,...)
 
