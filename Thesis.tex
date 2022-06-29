@@ -1,0 +1,145 @@
+% http://www.idsc.ethz.ch/education/theses-semester-projects.html
+% IDSC LaTeX Thesis Template
+% 
+% Author(s):	Eric Müller
+% 				Institute for Dynamic Systems and Control
+% 				Swiss Federal Institute of Technology (ETH) Zurich
+% 
+% Created:		2004/04/02  (Eric Mueller)
+% 
+% Notes: Has been tested on Windows 7 + MikTeX + TeXnicCenter
+%
+% Revisions: 	2009/05/29  (Soren Ebbesen)
+% 				    2011/03/22	(Soren Ebbesen)
+%             2013/03/08	(Soren Ebbesen)
+%             2014/03/13	(Soren Ebbesen)
+% ______________________________________________________________________________
+\documentclass[10pt,twoside,a4paper,fleqn]{report}
+
+%custom commands for comments of Giacomo (gi), Mohammad (ms), Miguel (mps)
+\newcommand{\gi}[1]{\textcolor{red}{{\bf GI:}~#1}}    
+\newcommand{\ms}[1]{\textcolor{cyan}{{\bf MS:}~#1}} 
+\newcommand{\mps}[1]{\colorbox{orange}{{\bf }~#1}} 
+
+\usepackage[english,mt]{ethidsc} % Special IDSC styles and commands      	
+								 % {german}/english: language of headings, etc.
+								 % {st}/bt/mt: {semester}/bachelor/master thesis
+\usepackage{caption, subcaption}
+% Image position [H]
+\usepackage{float} % table position
+%\usepackage{csvsimple} %(if want to add tables from csv. Otherwise use: https://www.tablesgenerator.com/latex_tables and import them from File->import csv file...)
+% Tables with cells that take multiple rows
+\usepackage{multirow}
+% Allow for a new line in the same cell of a table (https://tex.stackexchange.com/questions/2441/how-to-add-a-forced-line-break-inside-a-table-cell/19678)
+\usepackage{makecell}
+% text color
+\usepackage{xcolor}
+% forests (used to represent classes in the code)
+\usepackage[edges]{forest}
+% forests (attempt II)
+\usepackage{forest}
+\usetikzlibrary{arrows.meta}
+\forestset{
+  dir tree/.style={
+    for tree={
+      parent anchor=south west,
+      child anchor=west,
+      anchor=mid west,
+      inner ysep=1pt,
+      grow'=0,
+      align=left,
+      edge path={
+        \noexpand\path [draw, \forestoption{edge}] (!u.parent anchor) ++(1em,0) |- (.child anchor)\forestoption{edge label};
+      },
+      font=\sffamily,
+      if n children=0{}{
+        delay={
+          prepend={[,phantom, calign with current]}
+        }
+      },
+      fit=band,
+      before computing xy={
+        l=2em
+      }
+    },
+  }
+}
+% accents and special characters
+%\usepackage[utf8]{inputenc}
+
+% Page header (don't change)____________________________________________________
+\setlength{\parindent}{0em}                 % Disable parindent
+\rhead[\nouppercase{\rightmark}]{\thepage}  % Special headings
+\lhead[\thepage]{\nouppercase{\leftmark}}   % Special headings
+\cfoot{}                                    % Special headings
+
+
+% Title page (please fill in)___________________________________________________
+\title{Event-based analog signal recording and pre-processing frontends}
+
+
+\studentA{Mohammadali Sharifshazileh}
+\ethidA{}
+\semesterA{}
+\emailA{}
+
+%\studentB{Second Student}
+%\ethidB{12-345-678}
+%\semesterB{9}
+%\emailB{second@student.ethz.ch}
+
+\supervision{Prof. Dr. Giacomo Indiveri \\ Prof. Dr. Johannes Sarnthein}
+\date{Nov 2022}
+%\type{Ph.D. Thesis}
+%\identification{IDSC-XX-YY-ZZ} 		% Project identifier
+
+\infopage
+%\declaration
+
+% Begin document________________________________________________________________
+\begin{document}
+
+\maketitle 							% Create title page
+
+
+% Preamble______________________________________________________________________
+
+\pagenumbering{roman} 				% Begin roman page numbering (i,ii,...)
+
+\input{chapters/0_preamble}
+
+\pagestyle{fancy}               	% Fancy headings
+\pagenumbering{arabic}				% Begin arabic page numbering (1,2,...)
+
+
+
+% Chapters______________________________________________________________________
+
+
+\input{chapters/1_introduction}
+\newpage
+\input{chapters/2_daq}
+\newpage
+
+\input{chapters/3_cdesign}
+\newpage
+\input{chapters/4_csim}
+\newpage
+\input{chapters/5_expr}
+\newpage
+\input{chapters/6_discussion}
+\newpage
+
+% Appendix______________________________________________________________________
+\appendix
+\input{chapters/app_docu}
+\input{chapters/app_exp}
+
+
+% Bibliography__________________________________________________________________
+% Literature (Additional references can be added to the .bib-file manually, or by using, for example, the free application JabRef). Compile in the following order: latex -bibtex -latex -latex
+
+\bibliographystyle{plain}
+\bibliography{bibliography}
+
+\end{document}
