@@ -1,4 +1,4 @@
-LaTeX Thesis Template v.1.5.x
+LaTeX Thesis Template v.2.0.x
 
 Institute of Neuroinformatics, UZH and ETH Zurich
 
@@ -14,11 +14,22 @@ Adapted from
 > Maintained by Soren Ebbesen (IDSC), sebbesen@idsc.mavt.ethz.ch
 
 Original adaptation by Mohammad Ali, ali@ini.uzh.ch
-Updated by Vanessa Leite, vanessa@ini.uzh.ch
+Updates by Vanessa Leite, vanessa@ini.uzh.ch and Alpha Renner, alpha@ini.uzh.ch
 
 =========================================
 Change log:
 =========================================
+
+-----------------------------------------
+Version 2.0.0: 2022/10/19, Alpha Renner
+-----------------------------------------
+
+* Change doctype to scrbook
+* add hypersetup
+* Remove old bf commands
+* Change Swiss Federal Institute of Technology to ETH Zurich
+
+
 
 -----------------------------------------
 Version 1.5.1: 2022/06/30, Mohammad Ali & Vanessa Leite
