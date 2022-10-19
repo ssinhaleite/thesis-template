@@ -98,7 +98,7 @@
 \newcommand{\@declaration}{}
 \newcommand{\declaration}{\gdef\@declaration{
 \ifingerman
-{\bf Erkl\"{a}rung betreffend Plagiaten: \\[1ex]}
+{\textbf{Erkl\"{a}rung betreffend Plagiaten:} \\[1ex]}
 \ifstudentB
 Wir erkl\"{a}ren hiermit mit unserer Unterschrift, das Merkblatt Eigenst\"{a}ndigkeitserkl\"{a}rung zur Kenntnis genommen, die vorliegende Arbeit selbst\"{a}ndig verfasst und die im betroffenen Fachgebiet \"{u}blichen Zitiervorschriften eingehalten zu haben.\\[3ex]
 \else
@@ -112,7 +112,7 @@ Z\"{u}rich, \the\day. \the\month. \the\year: \hrulefill
 
 \else
 
-{\bf Statement regarding plagiarism: \\[1ex]}
+{\textbf{Statement regarding plagiarism:} \\[1ex]}
 \ifstudentB
 By signing this statement, we affirm that we have read and signed the Declaration of Originality, independently produced this paper, and adhered to the general practice of source citation in this subject-area.\\[3ex]
 \else
@@ -160,18 +160,18 @@ Zurich, \the\day. \the\month. \the\year \\ %: \hrulefill
 {\large \@studentA\if\@studentB\else \ \& \@studentB\fi}
 \vspace{1.5cm}
 
-{\Huge \bf \@title \par}
+{\Huge \textbf{\@title} \par}
 \vspace{2.5cm} 
 
-{\large \bf Ph.D. Thesis}\\[3ex]
+{\large \textbf{Ph.D. Thesis}}\\[3ex]
  Institute of Neuroinformatics \\
- University of Zurich and Swiss Federal Institute of Technology\\
+ University of Zurich and ETH Zurich\\
 \vspace{3.5cm}
 
 \ifingerman
- {\bf Betreuung} \\[1.5ex]
+ \textbf{Betreuung} \\[1.5ex]
 \else
- {\bf Supervision} \\[1.5ex]
+ \textbf{Supervision} \\[1.5ex]
 \fi
 \@supervision
 
@@ -211,40 +211,40 @@ Institute of Neuroinformatics\\
 \vspace{1.5cm}
 
 \ifingerman
-{\bf Titel der Arbeit: \\[1ex]}
+{\textbf{Titel der Arbeit:} \\[1ex]}
 {\LARGE \@title \\[1ex] \par}
 \else
-{\bf Title of work: \\[1ex]}
+{\textbf{Title of work:} \\[1ex]}
 {\LARGE \@title \\[1ex] \par}
 \fi
 
 \ifingerman
-{\bf Art der Arbeit und Datum: \\[1ex]}
+{\textbf{Art der Arbeit und Datum:} \\[1ex]}
 \@type, \@date\\[2.5ex]
 %\ifst
 %Semesterarbeit, \@date\\[2.5ex]
 %\else
 %Masterarbeit, \@date\\[2.5ex]
 %\fi
-{\bf Betreuung: \\[1ex]}
+{\textbf{Betreuung:} \\[1ex]}
 \@supervision
 \else
-{\bf Thesis type and date: \\[1ex]}
+{\textbf{Thesis type and date:} \\[1ex]}
 Ph.D. Thesis, \@date\\[2.5ex]
 %\ifst
 %Semester thesis, \@date\\[2.5ex]
 %\else
 %Master thesis, \@date\\[2.5ex]
 %\fi
-{\bf Supervision: \\[1ex]}
+{\textbf{Supervision:} \\[1ex]}
 \@supervision
 \fi
 \vspace{1cm}
 
 \ifingerman
-{\bf \ifstudentB Studenten:\else Student: \fi}
+{\ifstudentB \textbf{Studenten:}\else \textbf{Student:} \fi}
 \else
-{\bf \ifstudentB Students:\else Student: \fi}
+{\ifstudentB \textbf{Students:}\else \textbf{Student:} \fi}
 \fi
 \begin{tabbing}
 \hspace*{3cm}  \= \kill
