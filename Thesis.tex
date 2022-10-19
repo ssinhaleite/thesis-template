@@ -14,11 +14,15 @@
 %             2013/03/08	(Soren Ebbesen)
 %             2014/03/13	(Soren Ebbesen)
 % ______________________________________________________________________________
-\documentclass[10pt,twoside,a4paper,fleqn]{report}
+% \documentclass[10pt,twoside,a4paper,fleqn]{report}
+\documentclass[10pt,twoside,a4paper,fleqn]{scrbook}
 
 %custom commands for comments of Supervisor (sv), phd candidate(pc)
-\newcommand{\sv}[1]{\textcolor{red}{{\bf SV:}~#1}}    
-\newcommand{\pc}[1]{\textcolor{cyan}{{\bf PC:}~#1}} 
+\newcommand{\sv}[1]{\textcolor{red}{{\textbf{SV:}}~#1}}    
+\newcommand{\pc}[1]{\textcolor{cyan}{{\textbf{PC:}}~#1}} 
+
+% text color
+\usepackage[svgnames,x11names,table]{xcolor}
 
 \usepackage[english,mt]{ethidsc} % Special IDSC styles and commands      	
 								 % {german}/english: language of headings, etc.
@@ -31,8 +35,6 @@
 \usepackage{multirow}
 % Allow for a new line in the same cell of a table (https://tex.stackexchange.com/questions/2441/how-to-add-a-forced-line-break-inside-a-table-cell/19678)
 \usepackage{makecell}
-% text color
-\usepackage{xcolor}
 % forests (used to represent classes in the code)
 \usepackage[edges]{forest}
 % forests (attempt II)
@@ -41,6 +43,19 @@
 \usepackage{acronym}
 % to include a pdf with the title page
 \usepackage{pdfpages}
+
+\hypersetup{ 	
+pdfsubject = {Thesis},
+pdftitle = {},
+pdfauthor = {},
+colorlinks=true,
+urlcolor=DarkBlue,
+linkcolor=DarkBlue,
+citecolor=DarkBlue,
+filecolor=DarkBlue,
+pdfborder={0 0 0}
+}
+
 
 \usetikzlibrary{arrows.meta}
 \forestset{
