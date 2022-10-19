@@ -21,14 +21,15 @@ Change log:
 =========================================
 
 -----------------------------------------
-Version 2.0.0: 2022/10/19, Alpha Renner
+Version 2.0.1: 2022/10/19, Alpha Renner, Vanessa Leite
 -----------------------------------------
 
 * Change doctype to scrbook
 * add hypersetup
 * Remove old bf commands
 * Change Swiss Federal Institute of Technology to ETH Zurich
-
+* Use full ini man instead of just head
+* Print only used items in the acronym list 
 
 
 -----------------------------------------
