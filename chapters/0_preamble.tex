@@ -1,6 +1,9 @@
 %---------------------------------------------------------------------------
 % Preface
 
+
+%% If you are doing your thesis at ETH, the doctoral thesis must include an abstract in one official Swiss language and in English
+%% The doctoral thesis at ETH also has to include a CV -- this template does not offer explicit support for that: feel free to change it and add a PR.
 \chapter*{Abstract}
  \addcontentsline{toc}{chapter}{Abstract}
 
@@ -21,16 +24,14 @@
  \newpage
 
 %---------------------------------------------------------------------------
-% Symbols
+% Symbols and Acronyms
 
-\chapter*{Nomenclature}\label{chap:symbole}
- \addcontentsline{toc}{chapter}{Nomenclature}
-
-\section*{Symbols}
-
-
-\section*{Acronyms and Abbreviations}
+\chapter*{Acronyms and Abbreviations}\label{chap:symbole}
+\addcontentsline{toc}{chapter}{Acronyms}
+%% biblio/biblioncs provide an acronym list file
 \input{biblio/acronyms_list}
+%% if you dont have access to it, use your own acronym list instead:
+%\input{biblio/my-acronyms}
 
 
  \newpage

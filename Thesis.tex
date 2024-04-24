@@ -10,12 +10,14 @@
 % Notes: Has been tested on Windows 7 + MikTeX + TeXnicCenter
 %
 % Revisions: 	2009/05/29  (Soren Ebbesen)
-% 				    2011/03/22	(Soren Ebbesen)
-%             2013/03/08	(Soren Ebbesen)
-%             2014/03/13	(Soren Ebbesen)
+% 			    2011/03/22	(Soren Ebbesen)
+%               2013/03/08	(Soren Ebbesen)
+%               2014/03/13	(Soren Ebbesen)
+%               2022/12/26	(Vanessa Leite)
+%               2024/04/24	(Vanessa Leite)
 % ______________________________________________________________________________
 % \documentclass[10pt,twoside,a4paper,fleqn]{report}
-\documentclass[10pt,twoside,a5paper,fleqn]{scrbook}
+\documentclass[10pt,twoside,a4paper,fleqn]{scrbook}
 
 %custom commands for comments of Supervisor (sv), phd candidate(pc)
 \newcommand{\sv}[1]{\textcolor{red}{{\textbf{SV:}}~#1}}    
@@ -43,6 +45,21 @@
 \usepackage[printonlyused]{acronym}
 % to include a pdf with the title page
 \usepackage{pdfpages}
+% todo notes
+\usepackage{todonotes}
+% tables
+\usepackage{tabulary}
+% for pseudocode
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+% for epigraph
+\usepackage{epigraph}
+% for non-default font type
+\usepackage{kpfonts}
+% to break long citation
+\usepackage{breakcites}
+\usepackage[round]{natbib} 
+
 
 \hypersetup{ 	
 pdfsubject = {Thesis},
@@ -55,6 +72,8 @@ citecolor=DarkBlue,
 filecolor=DarkBlue,
 pdfborder={0 0 0}
 }
+
+\graphicspath{{./img/}}
 
 
 \usetikzlibrary{arrows.meta}
@@ -115,30 +134,42 @@ pdfborder={0 0 0}
 % Begin document___________________________________________________________
 \begin{document}
 
-% First page of the thesis **has to be** the official page of the program
+% First page of the thesis **has to be** the official page of the program, otherwise thesis will be rejected
 \newlength{\originalVOffset}
  \newlength{\originalHOffset}
  \setlength{\originalVOffset}{\voffset}   
  \setlength{\originalHOffset}{\hoffset}
  \setlength{\voffset}{0cm}
  \setlength{\hoffset}{0cm}
- %% If you are in the joint PhD program, then doppeldoktort page has to be used
+ 
+ %% If you are in the joint PhD program (ETH+UZH), then doppeldoktort page has to be used
  \includepdf[pages=-]{Titelblatt_Doppeldoktorat.pdf}
- %% Otherwise, this is the right one
- %\includepdf[pages=-]{Titelblatt.pdf}
+ 
+ %% Otherwise
+
+ %% if you are a UZH student, this is the right one
+ %\includepdf[pages=-]{Titelblatt_UZH.pdf}
+ 
+ %% if you are a UZH student, this is the right one
+ %\includepdf[pages=-]{Titelblatt_ETH.pdf}
+
+
  \setlength{\voffset}{\originalVOffset}
  \setlength{\hoffset}{\originalHOffset}
- 
+
+
 % After, you can have your own designed page
+\maketitle 							% Create title page
+
 \clearpage
 \thispagestyle{empty}
 \vspace*{\fill}
- 
-\maketitle 							% Create title page
 
 % Preamble_______________________________________________________________
-
 \pagenumbering{roman} 				% Begin roman page numbering (i,ii,...)
+
+\epigraph{\itshape "Your epigraph goes here."}{Author}
+
 
 \input{chapters/0_preamble}
 
@@ -146,10 +177,13 @@ pdfborder={0 0 0}
 \pagenumbering{arabic}				% Begin arabic page numbering (1,2,...)
 
 
-
 % Chapters______________________________________________________________________
 
 
+\clearpage % this maybe need to change when printing
+\thispagestyle{empty}
+\vspace*{\fill}
+\epigraph{\itshape "Epigraphs for chapter, if you want to have them." }{Author, \textit{where they said that}}
 \input{chapters/1_introduction}
 \newpage
 	
@@ -163,7 +197,11 @@ pdfborder={0 0 0}
 % Bibliography__________________________________________________________________
 % Literature (Additional references can be added to the .bib-file manually, or by using, for example, the free application JabRef). Compile in the following order: latex -bibtex -latex -latex
 
-\bibliographystyle{plain}
+\bibliographystyle{apalike}
 \bibliography{biblio/biblioncs}
+
+%% If you dont have access to biblio/biblioncs you can create your own biblio file and use:
+%\bibliography{biblio/my-biblio}
+
 
 \end{document}

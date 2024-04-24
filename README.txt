@@ -1,16 +1,20 @@
-LaTeX Thesis Template v.2.0.x
+LaTeX Thesis Template v.2.1.0
 
 Institute of Neuroinformatics, UZH and ETH Zurich
 
-To use this template you need to have access to https://code.ini.uzh.ch/ncs/papers/biblio.
+If you are part of the NCS group, you need to add biblio from code.ini.uzh.ch as a submodule. Please check https://code.ini.uzh.ch/ncs/papers/biblio for more info.
+If you are not, this template has an example of biblio and acronym file you need to populate.
+
 
 You need to fill your information in the Titelblatt.doc and generate a pdf from it.
-This page is mandatory for MNF Thesis.
+This page is mandatory for Doctoral Thesis at ETH and UZH.
+(For double degree and UZH the page is available as a doc to be updated and generate a PDF. For ETH only the non-editable PDF is available, you will have to generate your own version of the PDF following the information listed.)
+
 
 Adapted from 
 > Copyright (C) 2004-2011
 > Institute for Dynamic Systems and Control, ETH Zurich
-> Original contribution by Eric Mueller (IMRT), 2004/04/02
+> Original contribution by Eric Mueller (IMRT), 2004/04/02 
 > Maintained by Soren Ebbesen (IDSC), sebbesen@idsc.mavt.ethz.ch
 
 Original adaptation by Mohammad Ali, ali@ini.uzh.ch
@@ -19,6 +23,17 @@ Updates by Vanessa Leite, vanessa@ini.uzh.ch and Alpha Renner, alpha@ini.uzh.ch
 =========================================
 Change log:
 =========================================
+
+-----------------------------------------
+Version 2.1.0: 2024/04/24, Vanessa Leite
+-----------------------------------------
+
+* Modify first page of the thesis: has to be the official page
+* Add official page for double degree ETH+UZH doctoral thesis
+* Add official page for ETH doctoral thesis (there's no editable version, just a template)
+* Add instructions for abstracts in case of ETH doctoral thesis
+* Add example of biblio and acronym file in case biblioncs is not accessible
+* Add example of epigraphs
 
 -----------------------------------------
 Version 2.0.1: 2022/10/19, Alpha Renner, Vanessa Leite
@@ -50,7 +65,7 @@ Version 1.4.1: 2014/13/03, Soren Ebbesen.
 Version 1.4.0: 2011/23/03, Soren Ebbesen.
 -----------------------------------------
 
-Major cahnges:
+Major changes:
 
 * Re-written in English
 
